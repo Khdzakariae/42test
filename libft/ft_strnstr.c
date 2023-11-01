@@ -35,11 +35,10 @@ char *ft_strnstr(const char *big, const char *little, size_t len)
         i++;  
     }
     return(NULL);
-    
-    
+     
 }
 
-#include <stdio.h>
+/*#include <stdio.h>
 int main ()
 {
         const char *largestring = "Foo Bar Baz";
@@ -49,4 +48,6 @@ int main ()
         ptr = ft_strnstr(largestring, smallstring, 8);
         printf ("%s",ptr);
     
-}
+}*/
+
+
