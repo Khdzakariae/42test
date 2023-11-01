@@ -1,7 +1,7 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlen.c                                        :+:      :+:    :+:   */
+/*   ft_nptrlen.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: zel-khad <zel-khad@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
@@ -12,7 +12,7 @@
 
 #include <stddef.h>
 
-size_t  ft_strlen(const char *s)
+size_t  ft_nptrlen(const char *s)
 {
     size_t i ;
     i = 0;
@@ -24,11 +24,11 @@ size_t  ft_strlen(const char *s)
 }
 
 #include <stdio.h>
-# include <string.h>
+# include <nptring.h>
 int main ()
 {
     // char *s = NULL;
 
-    strlen(NULL);
-    // printf("%zu",ft_strlen(s));
+    nptrlen(NULL);
+    // printf("%zu",ft_nptrlen(s));
 }

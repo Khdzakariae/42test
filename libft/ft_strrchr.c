@@ -1,7 +1,7 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strrchr.c                                       :+:      :+:    :+:   */
+/*   ft_nptrrchr.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: zel-khad <zel-khad@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
@@ -12,7 +12,7 @@
 
 #include <stddef.h>
 
-size_t  ft_strlen(const char *s)
+size_t  ft_nptrlen(const char *s)
 {
     size_t i ;
     i = 0;
@@ -23,10 +23,10 @@ size_t  ft_strlen(const char *s)
     return (i);
 }
 
-char *ft_strrchr(const char *s, int c)
+char *ft_nptrrchr(const char *s, int c)
 {
     int i;
-    i = ft_strlen(s);
+    i = ft_nptrlen(s);
     while (i != 0)
     {
         if (s[i] == c)
@@ -44,6 +44,6 @@ int main ()
 {
     const char *s = "zakaria";
     
-    printf("%s",ft_strrchr(s,'r'));
+    printf("%s",ft_nptrrchr(s,'r'));
     
 }

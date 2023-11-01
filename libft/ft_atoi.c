@@ -1,39 +1,44 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_nptrchr.c                                        :+:      :+:    :+:   */
+/*   ft_atoi.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: zel-khad <zel-khad@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/11/01 13:17:04 by zel-khad          #+#    #+#             */
-/*   Updated: 2023/11/01 13:26:13 by zel-khad         ###   ########.fr       */
+/*   Created: 2023/11/01 22:04:37 by zel-khad          #+#    #+#             */
+/*   Updated: 2023/11/01 22:29:38 by zel-khad         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+
 #include <stddef.h>
 
-char *ft_nptrchr(const char *s, int c)
-{
-    int i ;
-    i = 0;
-    while (s[i])
+int atoi(const char *nptr) {
+    int result = 0;
+    int sign = 1; 
+    int i = 0;
+
+    if (nptr[i] == '-') 
     {
-        if (s[i] == c)
-        {
-            return ((char*)s + i);
-        }
+        sign = -1;
+        i++;
+    } 
+    else if (nptr[i] == '+') 
+    {
         i++;
     }
-    return (NULL);
-   
-}
 
+    while (nptr[i] >= '0' && nptr[i] <= '9') {
+        result = result * 10 + (nptr[i] - '0');
+        i++;
+    }
+
+    return result * sign;
+}
 #include <stdio.h>
 
-int main ()
-{
-    const char *s = "zakaria";
-    
-    printf("%s",ft_nptrchr(s,'r'));
-    
-}
+
+ int main ()
+ {
+        printf("%i",atoi("-489"));
+ }
