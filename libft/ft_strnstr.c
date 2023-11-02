@@ -1,7 +1,7 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_ft_nptrnnptr.c                                       :+:      :+:    :+:   */
+/*   ft_ft_strnstr.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: zel-khad <zel-khad@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
@@ -10,9 +10,10 @@
 /*                                                                            */
 /* ************************************************************************** */
 
+#include <bsd/string.h>
 #include <stddef.h>
 
-char *ft_nptrnnptr(const char *big, const char *little, size_t len)
+char ft_strnstr(const char *big, const char *little, size_t len)
 {
     size_t i , j ;
     i = 0;
@@ -41,11 +42,11 @@ char *ft_nptrnnptr(const char *big, const char *little, size_t len)
 /*#include <stdio.h>
 int main ()
 {
-        const char *largenptring = "Foo Bar Baz";
-        const char *smallnptring = "Bar";
+        const char *largestring = "Foo Bar Baz";
+        const char *smallstring = "Bar";
         char *ptr;
 
-        ptr = ft_nptrnnptr(largenptring, smallnptring, 8);
+        ptr = ft_strnstr(largestring, smallstring, 8);
         printf ("%s",ptr);
     
 }*/

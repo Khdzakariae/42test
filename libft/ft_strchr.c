@@ -1,18 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_nptrchr.c                                        :+:      :+:    :+:   */
+/*   ft_strchr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: zel-khad <zel-khad@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/01 13:17:04 by zel-khad          #+#    #+#             */
-/*   Updated: 2023/11/01 13:26:13 by zel-khad         ###   ########.fr       */
+/*   Updated: 2023/11/02 09:34:23 by zel-khad         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stddef.h>
 
-char *ft_nptrchr(const char *s, int c)
+char *ft_strchr(const char *s, int c)
 {
     int i ;
     i = 0;
@@ -34,6 +34,6 @@ int main ()
 {
     const char *s = "zakaria";
     
-    printf("%s",ft_nptrchr(s,'r'));
+    printf("%s",ft_strchr(s,'r'));
     
 }

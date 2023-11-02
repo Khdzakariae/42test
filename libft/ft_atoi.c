@@ -6,30 +6,30 @@
 /*   By: zel-khad <zel-khad@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/01 22:04:37 by zel-khad          #+#    #+#             */
-/*   Updated: 2023/11/01 22:29:38 by zel-khad         ###   ########.fr       */
+/*   Updated: 2023/11/02 09:35:15 by zel-khad         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 
 #include <stddef.h>
 
-int atoi(const char *nptr) {
+int ft_atoi(const char *str) {
     int result = 0;
     int sign = 1; 
     int i = 0;
 
-    if (nptr[i] == '-') 
+    if (str[i] == '-') 
     {
         sign = -1;
         i++;
     } 
-    else if (nptr[i] == '+') 
+    else if (str[i] == '+') 
     {
         i++;
     }
 
-    while (nptr[i] >= '0' && nptr[i] <= '9') {
-        result = result * 10 + (nptr[i] - '0');
+    while (str[i] >= '0' && str[i] <= '9') {
+        result = result * 10 + (str[i] - '0');
         i++;
     }
 
@@ -40,5 +40,5 @@ int atoi(const char *nptr) {
 
  int main ()
  {
-        printf("%i",atoi("-489"));
+        printf("%i",ft_atoi("-489"));
  }
