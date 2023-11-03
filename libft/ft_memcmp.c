@@ -1,39 +1,47 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strncmp.c                                       :+:      :+:    :+:   */
+/*   ft_memcmp.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: zel-khad <zel-khad@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/11/02 09:46:50 by zel-khad          #+#    #+#             */
-/*   Updated: 2023/11/03 14:40:05 by zel-khad         ###   ########.fr       */
+/*   Created: 2023/11/03 14:38:54 by zel-khad          #+#    #+#             */
+/*   Updated: 2023/11/03 15:36:24 by zel-khad         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-//#include <bsd/string.h>
 #include <stddef.h>
 
-int ft_strncmp(const char *s1, const char *s2, size_t n)
+int memcmp(const void *s1, const void *s2, size_t n)
+
 {
     size_t i ;
     i = 0;
+
+    unsigned char *ptr;
+    unsigned char *p;
+
+    ptr = (unsigned char*)s1;
+    p = (unsigned char*)s2;
+    
     while (i <= n)
     {
-        if (s1[i] != s2[i])
+        if (ptr[i] != p[i])
         {
-            break;
+            return (ptr[i] - p[i]);
         }
         i++;
     }
-    return(s1[i] - s2[i]);
-     
+    return(0);  
 }
 
 #include <stdio.h>
 
+
 int main ()
 {
-    char *s1 = "hzllo";
+    char *s1 = "hlllo";
     char *s2 = "hello";
-    printf("%i",strncmp(s1,s2,5));
+    printf("%i",memcmp(s1, s2 , 10));
+    
 }

@@ -1,39 +1,46 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strncmp.c                                       :+:      :+:    :+:   */
+/*   ft_memcpy.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: zel-khad <zel-khad@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/11/02 09:46:50 by zel-khad          #+#    #+#             */
-/*   Updated: 2023/11/03 14:40:05 by zel-khad         ###   ########.fr       */
+/*   Created: 2023/11/03 12:56:12 by zel-khad          #+#    #+#             */
+/*   Updated: 2023/11/03 13:21:39 by zel-khad         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-//#include <bsd/string.h>
+#include <string.h>
 #include <stddef.h>
-
-int ft_strncmp(const char *s1, const char *s2, size_t n)
+void *memcpy(void *dest, const void *src, size_t n)
 {
     size_t i ;
+    unsigned char *ptr;
+    unsigned char *p;
+    
+    p = (unsigned char*) src ;
+    ptr = (unsigned char*) dest ;
     i = 0;
-    while (i <= n)
+    while (i < n)
     {
-        if (s1[i] != s2[i])
-        {
-            break;
-        }
+        ptr[i] = p[i];
         i++;
     }
-    return(s1[i] - s2[i]);
-     
+    ptr[i]= '\0';
+    return((void*)dest);
+    
 }
-
 #include <stdio.h>
 
 int main ()
 {
-    char *s1 = "hzllo";
-    char *s2 = "hello";
-    printf("%i",strncmp(s1,s2,5));
+    int source[] = {1, 2, 3};
+    int destination[20];
+    memcpy(destination, source, 3*4);
+    
+    for (int i = 0; i < 3; i++)
+    {
+            printf("Destination: %i\n", destination[i]);
+
+    }
 }

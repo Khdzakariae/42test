@@ -1,39 +1,40 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strncmp.c                                       :+:      :+:    :+:   */
+/*   ft_bzero.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: zel-khad <zel-khad@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/11/02 09:46:50 by zel-khad          #+#    #+#             */
-/*   Updated: 2023/11/03 14:40:05 by zel-khad         ###   ########.fr       */
+/*   Created: 2023/11/03 11:15:04 by zel-khad          #+#    #+#             */
+/*   Updated: 2023/11/03 11:31:44 by zel-khad         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-//#include <bsd/string.h>
+#include <string.h>
 #include <stddef.h>
 
-int ft_strncmp(const char *s1, const char *s2, size_t n)
+void ft_bzero(void *s, size_t n)
 {
-    size_t i ;
+    size_t i;
     i = 0;
-    while (i <= n)
+    
+    unsigned char *ptr;
+    
+    ptr = (unsigned char*)s;
+    
+    while (i < n)
     {
-        if (s1[i] != s2[i])
-        {
-            break;
-        }
+        ptr[i] = 0;
         i++;
     }
-    return(s1[i] - s2[i]);
-     
 }
 
 #include <stdio.h>
+#include <string.h> 
 
-int main ()
-{
-    char *s1 = "hzllo";
-    char *s2 = "hello";
-    printf("%i",strncmp(s1,s2,5));
+int main() {
+    char s[10];
+    ft_bzero(s, sizeof(char) * 10);
+    printf("%s\n", s);
+    return 0;
 }

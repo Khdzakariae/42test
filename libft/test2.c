@@ -1,17 +1,27 @@
+#include <stddef.h>
+#include <string.h>
+
+int memcmp(const void *s1, const void *s2, size_t n) {
+    size_t i = 0;
+    const unsigned char *ptr = (const unsigned char*)s1;
+    const unsigned char *p = (const unsigned char*)s2;
+
+    while (i < n) {
+        if (ptr[i] != p[i]) {
+            return ptr[i] - p[i];
+        }
+        i++;
+    }
+    return 0;  // The strings are equal up to n bytes
+}
+
 #include <stdio.h>
 
 
 int main ()
 {
-    int a = 5;
-    int b = 2;
-
-    double c ;
-    c =  (double) a / b;
-
-
-
-    printf("%d / %d  = %d \n" ,a , b,a/b );
-    printf("%d / %d  = %f \n" ,a , c);
-    return (0);
+    char *s1 = "hlllo";
+    char *s2 = "hello";
+    printf("%i",memcmp(s1, s2 , 10));
+    
 }
