@@ -6,7 +6,7 @@
 /*   By: zel-khad <zel-khad@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/01 13:17:04 by zel-khad          #+#    #+#             */
-/*   Updated: 2023/11/02 09:34:23 by zel-khad         ###   ########.fr       */
+/*   Updated: 2023/11/04 20:55:58 by zel-khad         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,8 +18,7 @@ char *ft_strchr(const char *s, int c)
     i = 0;
     while (s[i])
     {
-        if (s[i] == c)
-        {
+        if (s[i] == c) {
             return ((char*)s + i);
         }
         i++;

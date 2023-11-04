@@ -6,13 +6,15 @@
 /*   By: zel-khad <zel-khad@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/01 22:04:37 by zel-khad          #+#    #+#             */
-/*   Updated: 2023/11/02 09:35:15 by zel-khad         ###   ########.fr       */
+/*   Updated: 2023/11/04 20:54:52 by zel-khad         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 
 #include <stddef.h>
 
+
+// overflow
 int ft_atoi(const char *str) {
     int result = 0;
     int sign = 1; 
@@ -40,5 +42,5 @@ int ft_atoi(const char *str) {
 
  int main ()
  {
-        printf("%i",ft_atoi("-489"));
+        printf("%i",atoi("+489"));
  }

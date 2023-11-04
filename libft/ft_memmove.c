@@ -6,30 +6,13 @@
 /*   By: zel-khad <zel-khad@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/03 16:12:13 by zel-khad          #+#    #+#             */
-/*   Updated: 2023/11/04 12:11:58 by zel-khad         ###   ########.fr       */
+/*   Updated: 2023/11/04 18:34:07 by zel-khad         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stddef.h>
 
-
-void *cheack(void *dest, const void *src, size_t n)
-{
-        size_t i;
-        unsigned char *ptr;
-        unsigned char *p;
-
-        p = (unsigned char*) src ;
-        ptr = (unsigned char*) dest ;
-        i = 0;
-        
-        while (i++ < n)
-        {
-            ptr[i] = p[i];
-        }
-        ptr[i]= '\0';
-        return((void*)dest);
-}
+//mem <==>
 void *ft_memmove(void *dest, const void *src, size_t n)
 {
     unsigned char *ptr;
@@ -50,7 +33,9 @@ void *ft_memmove(void *dest, const void *src, size_t n)
         }
     }
     else
-        cheack(dest , src, n);
+        ft_memcpy(dest , src, n);
+        
+    
     return ((void*)dest);
 }
 #include <stdio.h>

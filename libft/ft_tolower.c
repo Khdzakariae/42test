@@ -6,10 +6,12 @@
 /*   By: zel-khad <zel-khad@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/31 20:03:30 by zel-khad          #+#    #+#             */
-/*   Updated: 2023/10/31 20:07:08 by zel-khad         ###   ########.fr       */
+/*   Updated: 2023/11/04 18:41:05 by zel-khad         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+
+// why tolower and ctype fucnton use int as parametre
 int ft_tolower(int c)
 {
     if (c >= 'A' && c <= 'Z')

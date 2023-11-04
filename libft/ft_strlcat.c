@@ -26,7 +26,7 @@ size_t  ft_strlen(const char *s)
     return (i);
 }
 
-size_t  strlcat(char *dst, const char *src, size_t size)
+size_t  strlcat(char *dst, const char *src, size_t size) // get more knowldge about when want to use strlcat and why we should use it
 {
     size_t i ;
     size_t len;

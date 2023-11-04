@@ -6,7 +6,7 @@
 /*   By: zel-khad <zel-khad@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/04 12:16:55 by zel-khad          #+#    #+#             */
-/*   Updated: 2023/11/04 14:49:21 by zel-khad         ###   ########.fr       */
+/*   Updated: 2023/11/04 18:19:02 by zel-khad         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,14 +31,12 @@ void ft_bzero(void *s, size_t n)
 
 void *ft_calloc(size_t nmemb, size_t size)
 {
+    // TODO: Max 
     void *ptr;
     ptr = malloc(nmemb * size);
     if (!ptr)
-    {
-        free(ptr);
         return(0);
-    }
-        ft_bzero(ptr, size * nmemb);
+    ft_bzero(ptr, size * nmemb);
     return (ptr);
 }
 
@@ -47,7 +45,7 @@ void *ft_calloc(size_t nmemb, size_t size)
 int main ()
 {
     char  *ptr;
-    ptr = ft_calloc(10 , 1);
+    ptr = ft_calloc(90111111 , 9999991);
     for (size_t i = 0; i < 10; i++)
     {
         printf("%i \n", ptr[i]);

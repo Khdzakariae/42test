@@ -6,7 +6,7 @@
 /*   By: zel-khad <zel-khad@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/03 10:25:24 by zel-khad          #+#    #+#             */
-/*   Updated: 2023/11/03 11:12:54 by zel-khad         ###   ########.fr       */
+/*   Updated: 2023/11/04 18:44:21 by zel-khad         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,12 +34,24 @@ void *ft_memset(void *s, int c, size_t n)
     
 }
 
+/*
+ TODO:
+    get more knowledge about bytes {int char}
+    and how work at memory 
+    depht understanding of mem concepts !
+*/
+
 #include <stdio.h>
 #include <string.h> 
 
-int main() {
-    char s[10];
-    ft_memset(s, 'a', sizeof(char) * 15);
-    printf("%s\n", s);
+int main() 
+{
+    int t[10];
+    ft_memset(t, 2, 10);
+    for (size_t i = 0; i < 10; i++)
+    {
+        printf("%i", t[i]);
+    }
+    
     return 0;
 }

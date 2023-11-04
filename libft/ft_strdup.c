@@ -6,7 +6,7 @@
 /*   By: zel-khad <zel-khad@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/04 14:49:02 by zel-khad          #+#    #+#             */
-/*   Updated: 2023/11/04 15:47:37 by zel-khad         ###   ########.fr       */
+/*   Updated: 2023/11/04 18:35:08 by zel-khad         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,6 @@ void *ft_calloc(size_t nmemb, size_t size)
     ptr = malloc(nmemb * size);
     if (!ptr)
     {
-        free(ptr);
         return(0);
     }
     return (ptr);
@@ -34,7 +33,7 @@ char *ft_strdup(const char *s, size_t n)
     
     ptr = ft_calloc(sizeof(char) , n);
     
-    while (i < n)
+    while (i < n) // handel segfault : when n > lenght of s
     {
         ptr[i] = s[i];
         i++;

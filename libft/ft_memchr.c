@@ -6,7 +6,7 @@
 /*   By: zel-khad <zel-khad@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/03 15:46:54 by zel-khad          #+#    #+#             */
-/*   Updated: 2023/11/03 16:11:41 by zel-khad         ###   ########.fr       */
+/*   Updated: 2023/11/04 19:40:24 by zel-khad         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ void *ft_memchr(const void *s, int c, size_t n)
     i = 0;
     
     const unsigned char *ptr;
-    ptr = ((unsigned char*)s);
+    ptr = s; // TODO: why cast by unsigned char >
     
     
     while (i < n)
