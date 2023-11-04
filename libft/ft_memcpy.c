@@ -6,7 +6,7 @@
 /*   By: zel-khad <zel-khad@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/03 12:56:12 by zel-khad          #+#    #+#             */
-/*   Updated: 2023/11/03 13:21:39 by zel-khad         ###   ########.fr       */
+/*   Updated: 2023/11/03 18:27:28 by zel-khad         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,6 +21,12 @@ void *memcpy(void *dest, const void *src, size_t n)
     p = (unsigned char*) src ;
     ptr = (unsigned char*) dest ;
     i = 0;
+
+    if (src == '\0' && dest == '\0')
+    {
+        return (0);
+    }
+    
     while (i < n)
     {
         ptr[i] = p[i];

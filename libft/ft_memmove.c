@@ -1,47 +1,35 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memcmp.c                                        :+:      :+:    :+:   */
+/*   ft_memmove.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: zel-khad <zel-khad@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/11/03 14:38:54 by zel-khad          #+#    #+#             */
-/*   Updated: 2023/11/03 16:11:59 by zel-khad         ###   ########.fr       */
+/*   Created: 2023/11/03 16:12:13 by zel-khad          #+#    #+#             */
+/*   Updated: 2023/11/03 18:27:59 by zel-khad         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stddef.h>
-
-int ft_memcmp(const void *s1, const void *s2, size_t n)
-
+void *memmove(void *dest, const void *src, size_t n)
 {
     size_t i ;
-    i = 0;
-
     unsigned char *ptr;
     unsigned char *p;
-
-    ptr = (unsigned char*)s1;
-    p = (unsigned char*)s2;
     
-    while (i <= n)
+    p = (unsigned char*) src ;
+    ptr = (unsigned char*) dest ;
+    i = 0;
+
+    if (src == '\0' && dest == '\0')
     {
-        if (ptr[i] != p[i])
-        {
-            return (ptr[i] - p[i]);
-        }
+        return (0);
+    }
+    
+    while (i < n)
+    {
+        ptr[i] = p[i];
         i++;
     }
-    return(0);  
-}
-
-#include <stdio.h>
-
-
-int main ()
-{
-    char *s1 = "hlllo";
-    char *s2 = "hello";
-    printf("%i",ft_memcmp(s1, s2 , 10));
-    
+    ptr[i]= '\0';
+    return((void*)dest);
 }
