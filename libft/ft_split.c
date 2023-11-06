@@ -6,7 +6,7 @@
 /*   By: zel-khad <zel-khad@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/05 16:16:42 by zel-khad          #+#    #+#             */
-/*   Updated: 2023/11/06 15:54:08 by zel-khad         ###   ########.fr       */
+/*   Updated: 2023/11/06 17:30:52 by zel-khad         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,11 +24,7 @@ void *ft_calloc(size_t nmemb, size_t size)
 }
 
 char *ft_substr(char const *s, unsigned int start, size_t len)
-{
-
-    // TODO: check if the start > sizeof(s) or  start - len > lenght of s  }} return NULL
-    
-    
+{    
     char *ptr = ft_calloc(len + 1, sizeof(char));
     if (ptr == NULL)
     {
@@ -37,11 +33,10 @@ char *ft_substr(char const *s, unsigned int start, size_t len)
     
     unsigned int i = 0;
      
-    while (s[start + i] != '\0' && i < len ) // when u check lenght before s[start + i]: 100% swgfault
+    while (s[start + i] != '\0' && i < len ) 
     {
         ptr[i] = s[start + i];
         i++;
-        //printf(".");
     }
     
     ptr[i] = '\0';
@@ -49,30 +44,26 @@ char *ft_substr(char const *s, unsigned int start, size_t len)
     return ptr;
 }
 
-
-
 int checkwords (char const *s ,char c)
 {
     size_t i ;
-    size_t words;
+    int words;
+    
     i = 0;
     words = 0;
 
         while (s[i])
         {
-        if(s[i] != c)
-        {
-            while (s[i] && s[i] != c)
+            if(s[i] != c)
             {
-                i++;
+                while (s[i] && s[i] != c)
+                {
+                  i++;
+                }
+                words++;
             }
-            words++;
-        }
-        else
             i++;
         }
-    
-    
     return(words);
 }
 
@@ -92,10 +83,9 @@ char **ft_split(char const *s, char c)
     i = 0;
     
     smp = checkwords(s ,c);
-    ptr =ft_calloc(smp, sizeof(char*));   
+    ptr =ft_calloc(smp +1, sizeof(char*));   
     while (s[i])
     {
-        printf("%i \n",i);
         if(s[i] != c)
         {
             start = i;
@@ -103,22 +93,20 @@ char **ft_split(char const *s, char c)
             {
                 i++;
             }
-            end = i - j;
-            ptr[j] = ft_substr(s ,start,end);
+            end = i;
+            ptr[j] = ft_substr(s ,start,end - start);
             j++ ;          
-            i++;
-            
-            
+            i++;  
         }
-        //printf(".");
+        i++;
     }
     return(ptr);
 }
 
 int main()
 {
-    char const *s = "aebdegj";
-    char **result = ft_split(s, 'e');
+    char const *s = " gav jlhgjbk kge  gjm";
+    char **result = ft_split(s, ' ');
 
     for (int j = 0; result[j] != NULL; j++) {
         printf("%s\n", result[j]);
