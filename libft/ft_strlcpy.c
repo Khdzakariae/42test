@@ -6,13 +6,14 @@
 /*   By: zel-khad <zel-khad@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/01 13:05:08 by zel-khad          #+#    #+#             */
-/*   Updated: 2023/11/02 09:34:23 by zel-khad         ###   ########.fr       */
+/*   Updated: 2023/11/06 13:35:10 by zel-khad         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 
 #include <stddef.h>
 #include <stdio.h>
+#include <bsd/string.h>
 
 
 
@@ -32,7 +33,7 @@ size_t  ft_strlcpy(char *dst, const char *src, size_t size)
     size_t i;
     i = 0 ;
     if (size == 0 || size < i)
-        return(ft_strlen(src));
+        return(ft_strlen(src) + size);
     while (i <= size - 1 && src[i])
     {
         dst[i] = src[i];
@@ -42,15 +43,15 @@ size_t  ft_strlcpy(char *dst, const char *src, size_t size)
     return(ft_strlen(src));
 }
 
-/*int main ()
+int main ()
 {
-    char *src = "zaki";
-    char dst[10];
-    ft_strlcpy(dst,src,15);
+    char *src = "mohamed";
+    char dst[3];
+    strlcpy(dst,src,5);
     printf ("%s %s",dst , src);
     
-}*/
-int main() {
+}
+/*int main() {
     // Test cases for different destination sizes
     char dst1[20] = "Hello";
     const char *src1 = " World!";
@@ -103,4 +104,4 @@ int main() {
     printf("Copied string 8: %s\n", dst8);
 
     return 0;
-}
+}*/
