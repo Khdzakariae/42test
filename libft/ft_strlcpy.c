@@ -6,14 +6,14 @@
 /*   By: zel-khad <zel-khad@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/01 13:05:08 by zel-khad          #+#    #+#             */
-/*   Updated: 2023/11/06 13:35:10 by zel-khad         ###   ########.fr       */
+/*   Updated: 2023/11/06 13:38:23 by zel-khad         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 
 #include <stddef.h>
 #include <stdio.h>
-#include <bsd/string.h>
+//#include <bsd/string.h>
 
 
 
