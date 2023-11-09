@@ -6,7 +6,7 @@
 /*   By: zel-khad <zel-khad@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/07 11:16:05 by zel-khad          #+#    #+#             */
-/*   Updated: 2023/11/07 14:35:46 by zel-khad         ###   ########.fr       */
+/*   Updated: 2023/11/07 16:47:03 by zel-khad         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -102,7 +102,7 @@ char *ft_strtrim(char const *s1, char const *set)
 
 int main()
 {
-    char const *s1 = "momohamedmo";
-    printf("%s\n", ft_strtrim(s1 , "mo"));   
+    char const *s1 = "mmohamedm";
+    printf("%s\n", ft_strtrim(s1 , "m"));   
     return 0;
 }
