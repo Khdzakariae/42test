@@ -4,29 +4,29 @@
 #include <stdio.h>
 #include <stddef.h>
 
-// int  ft_intlen(int n)
-// {
-//     int tmp ;
-//     //int z ;
+int  ft_intlen(int n)
+{
+    int tmp ;
 
-//     tmp = 0;
+    tmp = 0;
+    if (n == 0)
+        tmp = 1;
+    if (n < 0)
+        n = n * -1;
+    if (n > 0)
+    {
+        while (n > 0)
+        {
+            n = n / 10;
+            tmp++;
+        }
+    }
+    return(tmp);
 
-//     if (n == 0)
-//     {
-//         tmp = 1;
-//     }
-//     while (n > 0)
-//     {
-//         n = n / 10;
-//         tmp++;
-//     }
-//     return(tmp);
-
-// }
+}
 
 
 int main ()
 {
-    int i = 0125;
-    printf("%i",i);
+    printf("%i",ft_intlen(-528));
 }
