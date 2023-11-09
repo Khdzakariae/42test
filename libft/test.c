@@ -1,118 +1,137 @@
-#include <stdio.h>
 #include <stdlib.h>
+#include <stdio.h>
 
-void	*ft_calloc(size_t nmemb, size_t size)
+
+void *ft_calloc(size_t nmemb, size_t size)
 {
     void *ptr;
     ptr = malloc(nmemb * size);
     if (!ptr)
-        return (NULL);
+        return(0);
     return (ptr);
 }
 
-char *ft_substr(char const *s, unsigned int start, size_t len)
+int  ft_intlen(int n)
 {
-    char *ptr = ft_calloc(len + 1, sizeof(char));
-    if (ptr == NULL)
+    int tmp ;
+
+    tmp = 0;
+    if (n == 0)
+        tmp = 1;
+    if (n < 0)
+        n = n * -1;
+    if (n > 0)
     {
-        return NULL;
-    }
-
-    unsigned int i = 0;
-
-    while (s[start + i] != '\0' && i < len)
-    {
-        ptr[i] = s[start + i];
-        i++;
-    }
-
-    ptr[i] = '\0';
-
-    return ptr;
-}
-
-int checkwords(char const *s, char c)
-{
-    size_t i;
-    int words;
-
-    i = 0;
-    words = 0;
-
-    while (s[i])
-    {
-        if (s[i] != c)
+        while (n > 0)
         {
-            while (s[i] && s[i] != c)
-            {
-                i++;
-            }
-            words++;
+            n = n / 10;
+            tmp++;
         }
-        i++;
     }
-    return words;
+    return(tmp);
+
 }
-
-char **zaki(char const *s, char c, char **ptr, int j)
+char * zaki(int n)
 {
-    int start;
-    int end;
-    int i;
+    int len ;
+    char *ptr;
 
-    start = 0;
-    end = 0;
-    i = 0;
+    len = ft_intlen(n);
 
-    while (s[i] != '\0')
-    {
-        if (s[i] != c)
+        n = n * -1;  
+         ptr = ft_calloc(len ,sizeof(char) + 2);
+         ptr[len + 2] = '\0';
+        while (n > 0)
         {
-            start = i;
-            while (s[i] != '\0' && s[i] != c)
-                i++;
-            end = i;
-            ptr[j] = ft_substr(s, start, end - start);
-            j++;
+            ptr[len]  = (n % 10) + 48;
+            n = n / 10 ;
+            len --;
         }
-        else
-            i++;
-    }
-    return ptr;
+        ptr[0] = '-';    
+…
+#include <stdlib.h>
+#include <stdio.h>
+
+
+void ft_calloc(size_t nmemb, size_t size)
+{
+    voidptr;
+    ptr = malloc(nmemb * size);
+    if (!ptr)
+        return(0);
+    return (ptr);
 }
 
-char **ft_split(char const *s, char c)
+int  ft_intlen(int n)
 {
-    int smp;
-    int j = 0;
-    char **ptr;
+    int tmp ;
 
-    smp = checkwords(s, c);
-    ptr = ft_calloc(smp + 1, sizeof(char *));
-    ptr = zaki(s, c, ptr, j);
-
-    if (ptr[j] == NULL)
+    tmp = 0;
+    if (n == 0)
+        tmp = 1;
+    if (n < 0)
+        n = n * -1;
+    if (n > 0)
     {
-        while (j >= 0)
+        while (n > 0)
         {
-            free(ptr[j]);
-            j--;
+            n = n / 10;
+            tmp++;
         }
-        free(ptr);
-        return NULL;
     }
-    return ptr;
+    return(tmp);
+
+}
+char * zaki(int n)
+{
+    int len ;
+    char ptr;
+
+    len = ft_intlen(n);
+
+        n = n -1;
+         ptr = ft_calloc(len ,sizeof(char) + 2);
+         ptr[len + 2] = '\0';
+        while (n > 0)
+        {
+            ptr[len]  = (n % 10) + 48;
+            n = n / 10 ;
+            len --;
+        }
+        ptr[0] = '-';
 }
 
-int main()
+char ft_itoa(int n)
 {
-    char const *s = "gavejlhgiejbkkgegjm";
-    char **result = ft_split(s, 'e');
+    int len;
+    charptr;
 
-    for (int j = 0; result[j] != NULL; j++)
+    len = ft_intlen(n);
+    if (n == 0)
     {
-        printf("%s\n", result[j]);
-        free(result[j]);
+        ptr = ft_calloc(1 , sizeof(char) + 1);
+       ptr[0] = '0';
+       ptr[1] = '\0';
     }
-    return 0;
+
+    if (n < 0)
+        ptr = zaki(n);
+    if (n > 0)
+    {
+        ptr = ft_calloc(len ,sizeof(char) + 1);
+         ptr[len] = '\0';
+        while (n > 0)
+        {
+            ptr[len - 1]  = (n % 10) + 48;
+            n = n / 10 ;
+            len --;
+        }
+    }
+
+    return(ptr);
+}
+
+int main ()
+{
+    printf("%s",ft_itoa(-154));
 }

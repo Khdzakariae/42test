@@ -63,6 +63,8 @@ char *ft_strjoin(char const *s1, char const *s2)
     return(ptr);
 }
 
+
+
 int main ()
 {
     char const *s1 = "hallo";

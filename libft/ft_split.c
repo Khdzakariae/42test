@@ -113,3 +113,16 @@ char	**ft_split(char const *s, char c)
 	}
 	return (ptr);
 }
+/*
+int main()
+{
+	char const *s = " gav ejlh giejbk kgeg jm";
+	char **result = ft_split(s, ' ');
+
+	for (int j = 0; result[j] != NULL; j++)
+	{
+		printf("%s\n", result[j]);
+		free(result[j]);
+	}
+	return 0;
+}*/
