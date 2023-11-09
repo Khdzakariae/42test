@@ -17,13 +17,13 @@
 
 void *ft_calloc(size_t nmemb, size_t size)
 {
-    // TODO: Max 
     void *ptr;
     ptr = malloc(nmemb * size);
     if (!ptr)
         return(0);
     return (ptr);
 }
+
 int  ft_intlen(int n)
 {
     int tmp ;
@@ -44,6 +44,24 @@ int  ft_intlen(int n)
     return(tmp);
 
 }
+char * zaki(int n)
+{
+    int len ;
+    char *ptr;
+
+    len = ft_intlen(n);
+
+        n = n * -1;  
+         ptr = ft_calloc(len ,sizeof(char) + 2);
+         ptr[len + 2] = '\0';
+        while (n > 0)
+        {
+            ptr[len]  = (n % 10) + 48;
+            n = n / 10 ;
+            len --;
+        }
+        ptr[0] = '-';    
+}
 
 char *ft_itoa(int n)
 {
@@ -51,23 +69,18 @@ char *ft_itoa(int n)
     char *ptr;
     
     len = ft_intlen(n);
-    if (n < 0)
+    if (n == 0)
     {
-        n = n * -1;  
-         ptr = ft_calloc(len ,sizeof(int) + 2);
-         ptr[len + 1] = '\0';
-        while (n > 0)
-        {
-            ptr[len]  = (n % 10) + 48;
-            n = n / 10 ;
-            len --;
-        }
-        ptr[0] = '-';
+        ptr = ft_calloc(1 , sizeof(char) + 1);
+       ptr[0] = '0';
+       ptr[1] = '\0';
     }
     
+    if (n < 0)
+        ptr = zaki(n);
     if (n > 0)
     {
-        ptr = ft_calloc(len ,sizeof(int) + 1);
+        ptr = ft_calloc(len ,sizeof(char) + 1);
          ptr[len] = '\0';
         while (n > 0)
         {
@@ -76,10 +89,11 @@ char *ft_itoa(int n)
             len --;
         }
     }
+
     return(ptr);
 }
 
 int main ()
 {
-    printf("%s",ft_itoa(-54124534));
+    printf("%s",ft_itoa(-154));
 }

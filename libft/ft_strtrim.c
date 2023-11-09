@@ -37,7 +37,7 @@ void	*ft_calloc(size_t nmemb, size_t size)
 
 char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
-	char			*ptr;
+	char		 *ptr;
 	unsigned int	i;
 
 	i = 0;
@@ -65,9 +65,8 @@ int  check(char const *s1, char const *set , int index)
     while (s1[i] && set[j])
     {
         if (s1[i] !=set[j])
-        {
             return(0);
-        }
+  
         i++;
         j++;
     }

@@ -47,7 +47,6 @@ int main ()
     
     for (int i = 0; i < 3; i++)
     {
-            printf("Destination: %i\n", destination[i]);
-
+        printf("Destination: %i\n", destination[i]);
     }
 }
