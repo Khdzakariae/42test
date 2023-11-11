@@ -6,7 +6,7 @@
 /*   By: zel-khad <zel-khad@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/05 16:16:42 by zel-khad          #+#    #+#             */
-/*   Updated: 2023/11/07 11:09:50 by zel-khad         ###   ########.fr       */
+/*   Updated: 2023/11/11 16:01:03 by zel-khad         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -113,16 +113,16 @@ char	**ft_split(char const *s, char c)
 	}
 	return (ptr);
 }
-/*
+
 int main()
 {
-	char const *s = " gav ejlh giejbk kgeg jm";
-	char **result = ft_split(s, ' ');
+	char const *s = "";
+	char **result = ft_split(s,'z');
 
-	for (int j = 0; result[j] != NULL; j++)
+	for (int j = 0; result != NULL; j++)
 	{
 		printf("%s\n", result[j]);
 		free(result[j]);
 	}
 	return 0;
-}*/
+}

@@ -6,7 +6,7 @@
 /*   By: zel-khad <zel-khad@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/04 12:16:55 by zel-khad          #+#    #+#             */
-/*   Updated: 2023/11/05 13:58:49 by zel-khad         ###   ########.fr       */
+/*   Updated: 2023/11/11 11:42:48 by zel-khad         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,8 +35,7 @@ void *ft_calloc(size_t nmemb, size_t size)
     void *ptr;
     ptr = malloc(nmemb * size);
     if (!ptr)
-        return(0);
-    ft_bzero(ptr, size * nmemb);
+        return(NULL);
     return (ptr);
 }
 

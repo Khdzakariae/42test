@@ -1,32 +1,18 @@
-
-
-
 #include <stdio.h>
-#include <stddef.h>
+#include <fcntl.h>
+#include <unistd.h>
 
-int  ft_intlen(int n)
-{
-    int tmp ;
-
-    tmp = 0;
-    if (n == 0)
-        tmp = 1;
-    if (n < 0)
-        n = n * -1;
-    if (n > 0)
-    {
-        while (n > 0)
-        {
-            n = n / 10;
-            tmp++;
-        }
-    }
-    return(tmp);
-
-}
 
 
 int main ()
 {
-    printf("%i",ft_intlen(-528));
+	int fd ;
+	fd = open("zaki.txt", O_RDWR | O_CREAT);
+
+	if (fd == -1)
+		printf("error!");
+	else
+		printf("succes : %d" , fd);
+	close(fd);
+
 }
