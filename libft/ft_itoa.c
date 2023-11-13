@@ -6,69 +6,61 @@
 /*   By: zel-khad <zel-khad@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/09 10:39:05 by zel-khad          #+#    #+#             */
-/*   Updated: 2023/11/13 17:08:54 by zel-khad         ###   ########.fr       */
+/*   Updated: 2023/11/13 20:18:04 by zel-khad         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdlib.h>
-#include <stdio.h>
-#include"libft.h"
 
-void *ft_calloc(size_t nmemb, size_t size)
+ int ft_intlen(long n)
 {
-    void *ptr;
-    ptr = malloc(nmemb * size);
-    if (!ptr)
-        return(NULL);
-    return (ptr);
-}
+    int tmp = 0;
 
-int  ft_intlen(int long n)
-{
-    int long  tmp ;
-
-    tmp = 0;
     if (n == 0)
-        tmp = 1;
+        return 1;
     if (n < 0)
     {
-        tmp ++;
+        tmp++;
         n = n * -1;
     }
-    if (n > 0)
+    while (n)
     {
-        while (n > 0)
-        {
-            n = n / 10;
-            tmp++;
-        }
+        n = n / 10;
+        tmp++;
     }
-    return(tmp);
-
+    return tmp;
 }
 
-char *ft_itoa(int nb)
+char *ft_itoa(int n)
 {
-    printf("i");
-    int len;
+    int   len;
     char *ptr;
-    long n ;
-    n = nb;
-    len = ft_intlen(n);
-    printf("%i", len);
-    ptr = ft_calloc(len + 1 , sizeof(char));
+    long  nb;
+
+    nb = n;
+    len = ft_intlen(nb);
+    ptr = (char *)malloc(len + 1);
+    if (!ptr)
+        return NULL;
     ptr[len--] = '\0';
-        while (n >= 0)
-        {
-            ptr[len]  = (n % 10) + 48;
-            n = n / 10 ;
-            len--;
-        }
-
-    return(ptr);
+    if (nb == 0)
+        ptr[0] = 48;
+    else if (nb < 0)
+    {
+        ptr[0] = '-';
+        nb = nb * -1;
+    }
+    while (nb != 0)
+    {
+        ptr[len] = (nb % 10) + '0';
+        nb = nb / 10;
+        len--;
+    }
+    return ptr;
 }
 
-int main ()
-{
-    printf("%s",ft_itoa(214));
-}
+// #include <stdio.h>
+// int main ()
+// {
+//     printf("%s", ft_itoa(-2147483648));
+// }
