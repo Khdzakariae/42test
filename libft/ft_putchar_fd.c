@@ -6,7 +6,7 @@
 /*   By: zel-khad <zel-khad@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/11 21:09:47 by zel-khad          #+#    #+#             */
-/*   Updated: 2023/11/12 11:46:05 by zel-khad         ###   ########.fr       */
+/*   Updated: 2023/11/13 22:13:46 by zel-khad         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,11 +14,10 @@
 #include <unistd.h>
 #include <fcntl.h>
 
-void ft_putchar_fd(char c, int fd)
+void	ft_putchar_fd(char c, int fd)
 {
-    write(fd , &c , 1);
+	write(fd, &c, 1);
 }
-
 // int main ()
 // {
 //     int fd;

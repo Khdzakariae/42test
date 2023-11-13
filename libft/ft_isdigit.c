@@ -6,24 +6,21 @@
 /*   By: zel-khad <zel-khad@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/30 15:48:29 by zel-khad          #+#    #+#             */
-/*   Updated: 2023/11/12 11:44:49 by zel-khad         ###   ########.fr       */
+/*   Updated: 2023/11/13 20:43:07 by zel-khad         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include"libft.h"
 
-int ft_isdigit(int c)
+int	ft_isdigit(int c)
 {
-    if ((c >= '0' && c <= '9'))
-        return(1);
-    return(0);
-
+	if ((c >= '0' && c <= '9'))
+		return (1);
+	return (0);
 }
 // #include <ctype.h>
 // #include <stdio.h>
 // int main ()
 // {
-    
-    
 //     printf("%i",ft_isdigit('9'));
 // }

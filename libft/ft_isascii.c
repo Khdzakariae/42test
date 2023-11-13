@@ -6,15 +6,15 @@
 /*   By: zel-khad <zel-khad@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/30 15:48:14 by zel-khad          #+#    #+#             */
-/*   Updated: 2023/11/12 14:38:30 by zel-khad         ###   ########.fr       */
+/*   Updated: 2023/11/13 20:42:00 by zel-khad         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include"libft.h"
 
-int ft_isascii(int c)
+int	ft_isascii(int c)
 {
-    if ((c >= 0 && c <= 127))
-        return(1);
-    return(0);
+	if ((c >= 0 && c <= 127))
+		return (1);
+	return (0);
 }
