@@ -6,21 +6,22 @@
 /*   By: zel-khad <zel-khad@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/01 22:04:37 by zel-khad          #+#    #+#             */
-/*   Updated: 2023/11/11 18:22:33 by zel-khad         ###   ########.fr       */
+/*   Updated: 2023/11/12 11:44:04 by zel-khad         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 
 #include <stddef.h>
 #include <stdlib.h>
-
+#include"libft.h"
 
 // overflow
 int ft_atoi(const char *str) {
     int result = 0;
     int sign = 1; 
     int i = 0;
-
+    while (str[i] == ' ' || (str[i] >= '\t' && str[i] <= '\r'))
+        i++;
     if (str[i] == '-') 
     {
         sign = -1;
@@ -38,10 +39,8 @@ int ft_atoi(const char *str) {
 
     return result * sign;
 }
-#include <stdio.h>
 
-
- int main ()
- {
-        printf("%i",atoi("    +489"));
- }
+//  int main ()
+//  {
+//         printf("%i",atoi("    +489"));
+//  }

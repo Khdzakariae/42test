@@ -6,10 +6,11 @@
 /*   By: zel-khad <zel-khad@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/11 22:00:08 by zel-khad          #+#    #+#             */
-/*   Updated: 2023/11/11 22:05:37 by zel-khad         ###   ########.fr       */
+/*   Updated: 2023/11/12 11:46:23 by zel-khad         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include"libft.h"
 #include <unistd.h>
 #include <fcntl.h>
 
@@ -25,11 +26,11 @@ void ft_putstr_fd(char *s, int fd)
 	}
 }
 
-int main ()
-{
-    int fd;
-    char *s;
-    s = "allahoakbar";
-    fd = open("zaki", O_RDWR | O_CREAT);
-    ft_putstr_fd(s , fd);
-}
+// int main ()
+// {
+//     int fd;
+//     char *s;
+//     s = "allahoakbar";
+//     fd = open("zaki", O_RDWR | O_CREAT);
+//     ft_putstr_fd(s , fd);
+// }

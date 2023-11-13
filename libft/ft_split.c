@@ -6,10 +6,11 @@
 /*   By: zel-khad <zel-khad@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/05 16:16:42 by zel-khad          #+#    #+#             */
-/*   Updated: 2023/11/11 16:01:03 by zel-khad         ###   ########.fr       */
+/*   Updated: 2023/11/12 11:46:31 by zel-khad         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include"libft.h"
 #include <stdio.h>
 #include <stdlib.h>
 
@@ -114,15 +115,15 @@ char	**ft_split(char const *s, char c)
 	return (ptr);
 }
 
-int main()
-{
-	char const *s = "";
-	char **result = ft_split(s,'z');
+// int main()
+// {
+// 	char const *s = "";
+// 	char **result = ft_split(s,'z');
 
-	for (int j = 0; result != NULL; j++)
-	{
-		printf("%s\n", result[j]);
-		free(result[j]);
-	}
-	return 0;
-}
+// 	for (int j = 0; result != NULL; j++)
+// 	{
+// 		printf("%s\n", result[j]);
+// 		free(result[j]);
+// 	}
+// 	return 0;
+// }

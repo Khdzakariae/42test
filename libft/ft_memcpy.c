@@ -6,48 +6,48 @@
 /*   By: zel-khad <zel-khad@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/03 12:56:12 by zel-khad          #+#    #+#             */
-/*   Updated: 2023/11/04 18:33:12 by zel-khad         ###   ########.fr       */
+/*   Updated: 2023/11/12 14:58:03 by zel-khad         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <string.h>
 #include <stddef.h>
+#include"libft.h"
 
 void *ft_memcpy(void *dest, const void *src, size_t n)
 {
     size_t i ;
     unsigned char *ptr;
-    unsigned char *p;
+    const char *p;
     
-    p = (unsigned char*) src ;
-    ptr = (unsigned char*) dest ;
+    p = src ;
+    ptr = dest ;
     i = 0;
     
-    if (!p && !ptr)
+    if (!p || !ptr)
     {
-        return (0);
+        return (NULL);
     }
     
     while (i < n)
-    {
+   {
         ptr[i] = p[i];
         i++;
-    }
-    ptr[i]= '\0';
-    return((void*)dest);
+   }
+    return(dest);
     
 }
-#include <stdio.h>
+// #include <stdio.h>
 
-int main ()
-{
-    int source[] = {1, 2, 3};
-    int destination[20];
-    ft_memcpy(destination, source, 3*4);
+// int main ()
+// {
+//     int source[] = {1, 2, 3};
+//     int destination[20];
+//     ft_memcpy(destination, source, 3*4);
     
-    for (int i = 0; i < 3; i++)
-    {
-            printf("Destination: %i\n", destination[i]);
+//     for (int i = 0; i < 3; i++)
+//     {
+//             printf("Destination: %i\n", destination[i]);
 
-    }
-}
+//     }
+// }

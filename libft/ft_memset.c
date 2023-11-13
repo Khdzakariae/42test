@@ -6,13 +6,14 @@
 /*   By: zel-khad <zel-khad@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/03 10:25:24 by zel-khad          #+#    #+#             */
-/*   Updated: 2023/11/04 18:44:21 by zel-khad         ###   ########.fr       */
+/*   Updated: 2023/11/12 11:45:34 by zel-khad         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 
 #include <stddef.h>
 #include <string.h>
+#include"libft.h"
 
 void *ft_memset(void *s, int c, size_t n)
 {
@@ -41,17 +42,17 @@ void *ft_memset(void *s, int c, size_t n)
     depht understanding of mem concepts !
 */
 
-#include <stdio.h>
-#include <string.h> 
+// #include <stdio.h>
+// #include <string.h> 
 
-int main() 
-{
-    int t[10];
-    ft_memset(t, 2, 10);
-    for (size_t i = 0; i < 10; i++)
-    {
-        printf("%i", t[i]);
-    }
+// int main() 
+// {
+//     int t[10];
+//     ft_memset(t, 2, 10);
+//     for (size_t i = 0; i < 10; i++)
+//     {
+//         printf("%i", t[i]);
+//     }
     
-    return 0;
-}
+//     return 0;
+// }

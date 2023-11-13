@@ -6,11 +6,11 @@
 /*   By: zel-khad <zel-khad@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/30 15:47:59 by zel-khad          #+#    #+#             */
-/*   Updated: 2023/11/01 12:52:41 by zel-khad         ###   ########.fr       */
+/*   Updated: 2023/11/12 11:42:18 by zel-khad         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-
+#include"libft.h"
 
 int ft_isalpha(int c)
 {
@@ -20,9 +20,9 @@ int ft_isalpha(int c)
 
 }
 
-int main ()
-{
-    printf("%i",ft_isalpha('c'));
-    return (0);
-}
+// int main ()
+// {
+//     printf("%i",ft_isalpha('c'));
+//     return (0);
+// }
 

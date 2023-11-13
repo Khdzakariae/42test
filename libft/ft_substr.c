@@ -6,12 +6,13 @@
 /*   By: zel-khad <zel-khad@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/04 15:56:43 by zel-khad          #+#    #+#             */
-/*   Updated: 2023/11/04 21:01:21 by zel-khad         ###   ########.fr       */
+/*   Updated: 2023/11/12 11:35:22 by zel-khad         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stddef.h>
 #include <stdlib.h>
+#include "libft.h"
 
 void *ft_calloc(size_t nmemb, size_t size)
 {
@@ -46,7 +47,7 @@ char *ft_substr(char const *s, unsigned int start, size_t len)
     
     unsigned int i = 0;
      
-     puts("i");
+
     while (s[start + i] != '\0' && i < len ) // when u check lenght before s[start + i]: 100% swgfault
     {
         ptr[i] = s[start + i];
@@ -58,12 +59,12 @@ char *ft_substr(char const *s, unsigned int start, size_t len)
     return ptr;
 }
 
-# include <stdio.h>
+// # include <stdio.h>
 
-int main ()
-{
-    const char  *s;
-    s = "hello";
-    (void)s;
-    printf("%s",ft_substr(NULL, 555,600));
-}
+// int main ()
+// {
+//     const char  *s;
+//     s = "hello";
+//     (void)s;
+//     printf("%s",ft_substr(NULL, 555,600));
+// }

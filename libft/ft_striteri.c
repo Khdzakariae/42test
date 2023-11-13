@@ -6,9 +6,11 @@
 /*   By: zel-khad <zel-khad@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/11 11:59:19 by zel-khad          #+#    #+#             */
-/*   Updated: 2023/11/11 14:06:33 by zel-khad         ###   ########.fr       */
+/*   Updated: 2023/11/12 11:23:22 by zel-khad         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include"libft.h"
 
 void ft_striteri(char *s, void (*f)(unsigned int, char*))
 {

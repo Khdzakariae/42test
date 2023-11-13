@@ -6,13 +6,14 @@
 /*   By: zel-khad <zel-khad@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/07 11:16:05 by zel-khad          #+#    #+#             */
-/*   Updated: 2023/11/07 16:47:03 by zel-khad         ###   ########.fr       */
+/*   Updated: 2023/11/12 11:47:25 by zel-khad         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdlib.h>
 #include <stdio.h>
 #include <stddef.h>
+#include "libft.h"
 
 size_t  ft_strlen(const char *s)
 {
@@ -100,9 +101,9 @@ char *ft_strtrim(char const *s1, char const *set)
     
 }
 
-int main()
-{
-    char const *s1 = "mmohamedm";
-    printf("%s\n", ft_strtrim(s1 , "m"));   
-    return 0;
-}
+// int main()
+// {
+//     char const *s1 = "mmohamedm";
+//     printf("%s\n", ft_strtrim(s1 , "m"));   
+//     return 0;
+// }

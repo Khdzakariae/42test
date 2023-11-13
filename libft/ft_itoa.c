@@ -6,13 +6,13 @@
 /*   By: zel-khad <zel-khad@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/09 10:39:05 by zel-khad          #+#    #+#             */
-/*   Updated: 2023/11/11 22:05:15 by zel-khad         ###   ########.fr       */
+/*   Updated: 2023/11/13 14:44:25 by zel-khad         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdlib.h>
 #include <stdio.h>
-
+#include"libft.h"
 
 void *ft_calloc(size_t nmemb, size_t size)
 {
@@ -23,9 +23,9 @@ void *ft_calloc(size_t nmemb, size_t size)
     return (ptr);
 }
 
-int  ft_intlen(int n)
+int  ft_intlen(int long n)
 {
-    int tmp ;
+    int long  tmp ;
 
     tmp = 0;
     if (n == 0)
@@ -40,17 +40,36 @@ int  ft_intlen(int n)
             tmp++;
         }
     }
+    //printf("%i", tmp);
     return(tmp);
 
 }
 char * zaki(int n)
 {
-    int len ;
+    
+    long len ;
+    int i ;
     char *ptr;
-
+    char *s ;
+    i = 0;
+    
     len = ft_intlen(n);
+    ptr = ft_calloc(len ,sizeof(char) + 2);
+    ptr[len] = '\0';
+    if (n ==  -2147483648)
+    {
+        s = "-2147483648";
+        while (s[i])
+        {
+            ptr[i] = s[i];
+            i++;
+        }
+    }
+    else
+    {
+        n = n * -1;  
+        //printf ("%li", sign);
 
-        n = n * - 1;  
          ptr = ft_calloc(len ,sizeof(char) + 2);
          ptr[len + 2] = '\0';
         while (n > 0)
@@ -60,7 +79,8 @@ char * zaki(int n)
             len --;
         }
         ptr[0] = '-';
-        return(ptr); 
+    }
+    return(ptr); 
 }
 
 char *ft_itoa(int n)
@@ -78,7 +98,7 @@ char *ft_itoa(int n)
     
     else if (n < 0)
         ptr = zaki(n);
-    if (n > 0)
+    else if (n > 0)
     {
         ptr = ft_calloc(len ,sizeof(char) + 1);
          ptr[len] = '\0';
@@ -95,5 +115,5 @@ char *ft_itoa(int n)
 
 int main ()
 {
-    printf("%s",ft_itoa(-2147483647));
+    printf("%s",ft_itoa));
 }

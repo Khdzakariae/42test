@@ -6,11 +6,12 @@
 /*   By: zel-khad <zel-khad@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/30 15:56:15 by zel-khad          #+#    #+#             */
-/*   Updated: 2023/11/02 09:34:23 by zel-khad         ###   ########.fr       */
+/*   Updated: 2023/11/12 11:24:17 by zel-khad         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stddef.h>
+#include "libft.h"
 
 size_t  ft_strlen(const char *s)
 {

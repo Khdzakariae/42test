@@ -6,13 +6,14 @@
 /*   By: zel-khad <zel-khad@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/05 13:42:49 by zel-khad          #+#    #+#             */
-/*   Updated: 2023/11/05 15:25:49 by zel-khad         ###   ########.fr       */
+/*   Updated: 2023/11/12 11:46:56 by zel-khad         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdio.h>
 #include <stddef.h>
 #include <stdlib.h>
+#include "libft.h"
 
 
 void *ft_calloc(size_t nmemb, size_t size)
@@ -65,9 +66,9 @@ char *ft_strjoin(char const *s1, char const *s2)
 
 
 
-int main ()
-{
-    char const *s1 = "hallo";
-    char const *s2 = "zaki";
-    printf("%s",ft_strjoin(s1 ,s2));
-}
+// int main ()
+// {
+//     char const *s1 = "hallo";
+//     char const *s2 = "zaki";
+//     printf("%s",ft_strjoin(s1 ,s2));
+// }

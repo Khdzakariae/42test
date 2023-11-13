@@ -6,11 +6,11 @@
 /*   By: zel-khad <zel-khad@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/03 15:46:54 by zel-khad          #+#    #+#             */
-/*   Updated: 2023/11/04 19:40:24 by zel-khad         ###   ########.fr       */
+/*   Updated: 2023/11/12 11:45:04 by zel-khad         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-
+#include"libft.h"
 #include <stddef.h>
 
 void *ft_memchr(const void *s, int c, size_t n)
@@ -34,12 +34,12 @@ void *ft_memchr(const void *s, int c, size_t n)
    
 }
 
-#include <stdio.h>
+// #include <stdio.h>
 
-int main ()
-{
-    const char *s = "zakaria";
+// int main ()
+// {
+//     const char *s = "zakaria";
     
-    printf("%s",(char*)ft_memchr(s,'r', 10));
+//     printf("%s",(char*)ft_memchr(s,'r', 10));
     
-}
+// }
