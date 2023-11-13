@@ -12,61 +12,78 @@
 
 #include <stdlib.h>
 #include <stdio.h>
-#include"libft.h"
+#include <stdint.h>
+#include "libft.h"
 
 void *ft_calloc(size_t nmemb, size_t size)
 {
-    void *ptr;
-    ptr = malloc(nmemb * size);
+    if (nmemb > 0 && SIZE_MAX / nmemb < size)
+        return NULL;
+
+    void *ptr = malloc(nmemb * size);
     if (!ptr)
-        return(NULL);
-    return (ptr);
+        return NULL;
+
+    return ptr;
 }
 
-int  ft_intlen(int long n)
+int ft_intlen(int n)
 {
-    int long  tmp ;
-
-    tmp = 0;
+    int tmp = 0;
     if (n == 0)
         tmp = 1;
     if (n < 0)
     {
-        tmp ++;
+        tmp++;
         n = n * -1;
     }
-    if (n > 0)
+    while (n > 0)
     {
-        while (n > 0)
-        {
-            n = n / 10;
-            tmp++;
-        }
+        n = n / 10;
+        tmp++;
     }
-    return(tmp);
-
+    return tmp;
 }
 
 char *ft_itoa(int nb)
 {
-    printf("i");
+    if (nb == 0)
+    {
+        char *zero_str = (char *)ft_calloc(2, sizeof(char));
+            zero_str[0] = '0';
+            zero_str[1] = '\0';
+        return zero_str;
+    }
     int len;
     char *ptr;
-    long n ;
-    n = nb;
-    len = ft_intlen(n);
-    printf("%i", len);
-    ptr = ft_calloc(len + 1 , sizeof(char));
-    ptr[len--] = '\0';
-        while (n >= 0)
-        {
-            ptr[len]  = (n % 10) + 48;
-            n = n / 10 ;
-            len--;
-        }
+    long n = nb;
 
-    return(ptr);
+    len = ft_intlen(n);
+    ptr = (char *)ft_calloc(len + (n > 0), sizeof(char));
+    if (!ptr)
+        return NULL;
+
+    if (n < 0)
+    {
+        ptr[0] = '-';
+        n = -n;
+    }
+
+    ptr[len--] = '\0';
+    while (n > 0)
+    {
+        ptr[len] = (n % 10) + '0';
+        n = n / 10;
+        len--;
+    }
+
+    return ptr;
 }
+/*
+int main()
+{
+        printf("%s",ft_itoa(0));
+}*/
 
 int main ()
 {
