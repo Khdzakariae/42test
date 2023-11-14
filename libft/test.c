@@ -1,64 +1,31 @@
 #include <stdio.h>
 #include <stdlib.h>
-#include <stdint.h>
 
 
-void *ft_calloc(size_t nmemb, size_t size)
+struct node 
 {
-    if (nmemb > 0 && SIZE_MAX / nmemb < size)
-        return NULL;
+    char *data ;
+    struct node *link;
+};
 
-    void *ptr = malloc(nmemb * size);
-    if (!ptr)
-        return NULL;
-
-    return ptr;
-}
-
-int ft_intlen(long n)
+int main ()
 {
-    int tmp = 0;
-    if (n == 0)
-        tmp = 1;
-    if (n < 0)
-    {
-        tmp++;
-        n = n * -1;
-    }
-    while (n > 0)
-    {
-        n = n / 10;
-        tmp++;
-    }
-    return tmp;
+    struct node *head = NULL;
+    head  = malloc(sizeof(struct node));
+
+    head ->data = "zaki";
+    head ->link = NULL;
+
+    struct node *currant ;
+    currant = malloc(sizeof(struct node));
+    currant ->data = "reda";
+    currant ->link = NULL ;
+    head ->link =currant;
+
+    currant = malloc(sizeof(struct node));
+    currant ->data = "kk";
+    currant ->link = NULL;
+    head->link->link = currant;
+
+    printf("%s , %s, %s",head->data ,->data ,currant->data);     
 }
-
-char *ft_itoa(int nb)
-{
-    int len;
-    char *ptr;
-    long n = nb; 
-
-    len = ft_intlen(n);
-    ptr = (char *)ft_calloc(len + 1, sizeof(char));
-
-    if (!ptr)
-        return NULL;
-
-    ptr[len--] = '\0';
-    while (n > 0)
-    {
-        ptr[len] = (n % 10) + '0';
-        n = n / 10;
-        len--;
-    }
-
-    return ptr;
-}
-
-int main()
-{
-    char *result = ft_itoa(2147483648);
-    printf("%s\n", result);
-}
-
