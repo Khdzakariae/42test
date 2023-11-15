@@ -6,7 +6,7 @@
 /*   By: zel-khad <zel-khad@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/05 16:16:42 by zel-khad          #+#    #+#             */
-/*   Updated: 2023/11/15 08:47:24 by zel-khad         ###   ########.fr       */
+/*   Updated: 2023/11/12 11:46:31 by zel-khad         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -84,13 +84,13 @@ int  fill_arrays(char const *s, char c, char **ptr)
 
 char	**ft_split(char const *s, char c)
 {
-	//int		j;
+	int		j;
 	int		words;
 	char	**ptr;
 
 	if (!s)
 		return NULL;
-//	j = 0;
+	j = 0;
 	words = checkwords(s, c) + 1;
 	ptr = malloc(words * sizeof(char *));
 	if (!ptr)
