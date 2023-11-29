@@ -1,6 +1,6 @@
-#!/bin/sh
+!/bin/sh
 rm libft/*
-cp -r ~/libft/*.c libft/
+cp -r ~/ft_printf/*.c printf/
 git add .
 git commit -m "hello"
 git push
