@@ -12,7 +12,7 @@
 
 #include "printf.h"
 
-void	ft_putstr_fd(char *s)
+void	ft_putstr(char *s)
 {
 	int	i;
 
