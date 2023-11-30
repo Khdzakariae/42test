@@ -1,27 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putstr.c                                        :+:      :+:    :+:   */
+/*   unsigned.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: zel-khad <zel-khad@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/11/29 14:14:32 by zel-khad          #+#    #+#             */
-/*   Updated: 2023/11/29 14:17:22 by zel-khad         ###   ########.fr       */
+/*   Created: 2023/11/30 18:05:03 by zel-khad          #+#    #+#             */
+/*   Updated: 2023/11/30 18:06:15 by zel-khad         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "printf.h"
 
-void	ft_putstr_fd(char *s)
+void	ft_unsigned(int nb)
 {
-	int	i;
-
-	if (!s)
-		return ;
-	i = 0;
-	while (s[i] != '\0')
+    if (nb > 9)
 	{
-		write(1, &s[i], 1);
-		i++;
+		ft_unsigned(nb / 10);
+		ft_unsigned(nb % 10);
 	}
+	else
+		ft_putchar(nb + '0');
 }

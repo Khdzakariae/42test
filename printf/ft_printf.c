@@ -35,6 +35,8 @@ void ft_printf(const char *format, ...)
                 ft_putstr(va_arg(list, char *));
             else if (format[i] == 'd')
                 ft_putnbr(va_arg(list, int));
+            else if (format[i] == 'u')
+                ft_putnbr(va_arg(list, int));
             else 
                 ft_putchar(format[i]);
         }
@@ -46,6 +48,6 @@ void ft_printf(const char *format, ...)
 }
 
 int main() {
-    ft_printf("%s%d","dd",456);
+    ft_printf("%d",-456);
     return 0;
-}
+} 
