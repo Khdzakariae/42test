@@ -10,18 +10,18 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-// #include "printf.h"
+#include "printf.h"
 
-// void	ft_lowexa(int nb)
-// {
-//     int tmp;
-//     char *str ;
-//     str = "123456789abcdef";
-//     if (nb == 0)
-// 	{
-// 		return (0);
-// 	}
-//     tmp = nb % 16;
-//     ft_lowexa(nb / 16);
-//     ft_putchar(str[tmp - 1]);
-// }
+void	ft_lowexa(int nb)
+{
+    int tmp;
+    char *str ;
+    str = "123456789abcdef";
+    if (nb == 0)
+	{
+		return;
+	}
+    tmp = nb % 16;
+    ft_lowexa(nb / 16);
+    ft_putchar(str[tmp - 1]);
+}

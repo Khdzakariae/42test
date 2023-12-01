@@ -10,3 +10,18 @@
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "printf.h"
+
+void	ft_upexa(int nb)
+{
+    int tmp;
+    char *str ;
+    str = "123456789ABCDEF";
+    if (nb == 0)
+	{
+		return;
+	}
+    tmp = nb % 16;
+    ft_upexa(nb / 16);
+    ft_putchar(str[tmp - 1]);
+}
