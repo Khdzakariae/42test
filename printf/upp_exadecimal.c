@@ -6,13 +6,13 @@
 /*   By: zel-khad <zel-khad@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/01 14:03:08 by zel-khad          #+#    #+#             */
-/*   Updated: 2023/12/01 14:09:29 by zel-khad         ###   ########.fr       */
+/*   Updated: 2023/12/01 16:36:42 by zel-khad         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "printf.h"
 
-void	ft_upexa(int nb)
+void	ft_upexa(unsigned int nb)
 {
     int tmp;
     char *str ;

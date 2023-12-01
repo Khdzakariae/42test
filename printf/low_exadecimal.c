@@ -6,13 +6,13 @@
 /*   By: zel-khad <zel-khad@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/01 10:37:44 by zel-khad          #+#    #+#             */
-/*   Updated: 2023/12/01 14:27:35 by zel-khad         ###   ########.fr       */
+/*   Updated: 2023/12/01 16:36:29 by zel-khad         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "printf.h"
 
-void	ft_lowexa(int nb)
+void	ft_lowexa(unsigned int nb)
 {
     int tmp;
     char *str ;

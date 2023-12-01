@@ -11,9 +11,9 @@
 void	ft_putnbr(int nb);
 void	ft_putstr(char *s);
 void	ft_putchar(char c);
-void	ft_lowexa(int nb);
-void	ft_upexa(int nb);
-void    ft_point(void *str)
+void	ft_lowexa(unsigned int nb);
+void	ft_upexa(unsigned int nb);
+void    ft_point(unsigned int *str);
 
 
 #endif

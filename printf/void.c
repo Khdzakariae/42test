@@ -6,15 +6,19 @@
 /*   By: zel-khad <zel-khad@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/01 15:39:20 by zel-khad          #+#    #+#             */
-/*   Updated: 2023/12/01 15:44:07 by zel-khad         ###   ########.fr       */
+/*   Updated: 2023/12/01 16:44:27 by zel-khad         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "printf.h"
 
-void ft_point(void *str)
+void ft_point(unsigned int *str)
 {
-    size_t  tmp;
-    tmp = (size_t)str;
-    ft_upexa(tmp);
+    if(!str)
+        ft_putstr("nil");
+    else
+    {
+        ft_putstr("0x");
+        ft_lowexa((size_t)str);
+    }
 }
