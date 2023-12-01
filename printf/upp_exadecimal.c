@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   upp_exadecimal.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: zel-khad <zel-khad@student.42.fr>          +#+  +:+       +#+        */
+/*   By: useraccount <useraccount@student.42.fr>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/01 14:03:08 by zel-khad          #+#    #+#             */
-/*   Updated: 2023/12/01 16:36:42 by zel-khad         ###   ########.fr       */
+/*   Updated: 2023/12/01 21:48:22 by useraccount      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,12 +16,12 @@ void	ft_upexa(unsigned int nb)
 {
     int tmp;
     char *str ;
-    str = "123456789ABCDEF";
+    str = "0123456789ABCDEF";
     if (nb == 0)
 	{
 		return;
 	}
     tmp = nb % 16;
     ft_upexa(nb / 16);
-    ft_putchar(str[tmp - 1]);
+    ft_putchar(str[tmp]);
 }
