@@ -47,7 +47,8 @@ void ft_printf(const char *format, ...)
     va_end(list);
 }
 
-int main() {
-    ft_printf("%d",-456);
-    return 0;
-} 
+// int main() 
+// {
+//     ft_printf("%d",456);
+//     return 0;
+// } 

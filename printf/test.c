@@ -96,3 +96,47 @@
 //     printf("%f\n", average(3, 1, 2, 3));
 //     return 0;
 // }
+
+
+
+// int factoyiele(int nb)
+// {
+//     int  i ;
+//     int res ;
+//     i = 1;
+//     res = 1;
+//     while (i <= nb)
+//     {
+//         res = res * i ;
+//         i ++;
+//     }
+//     return (res);
+// }
+
+// int factoyiele(int nb)
+// {
+//     if (nb == 0)
+//     {
+//         return(1);
+//     }
+//     return ((nb * factoyiele(nb - 1)));
+// }
+
+
+
+// int nember(int nb)
+// {
+//     if (nb > 300)
+//     {  
+//         return 0;
+//     }
+//     printf("%i ",nb);
+//     nember(nb + 1);
+// }
+
+// int main ()
+// {
+//     nember(0);
+// }
+
+
