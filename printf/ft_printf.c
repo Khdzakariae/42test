@@ -14,6 +14,8 @@ void ft_printf(const char *format, ...)
         {
             if (format[i] == 's') 
                 ft_putstr(va_arg(list, char *));
+            else if(format[i] == 'p')
+                ft_lowexa(va_arg(list , void *));
             else if(format[i] == 'x')
                 ft_lowexa(va_arg(list , int));
             else if(format[i] == 'X')
@@ -34,6 +36,6 @@ void ft_printf(const char *format, ...)
 
 int main() 
 {
-    ft_printf("%X",255);
+    ft_printf("%p",255);
     return 0;
 } 
