@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   tools.c                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: zel-khad <zel-khad@student.42.fr>          +#+  +:+       +#+        */
+/*   By: useraccount <useraccount@student.42.fr>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/03 10:22:16 by zel-khad          #+#    #+#             */
-/*   Updated: 2023/12/03 10:22:17 by zel-khad         ###   ########.fr       */
+/*   Updated: 2023/12/03 20:50:28 by useraccount      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ void	ft_putnbr(int nb)
 	}
 	else if (nb < 0)
 	{
-		write(1, "-", 1);
+		ft_putchar('-',1);
 		nb = -nb;
 		ft_putnbr(nb);
 	}
@@ -48,16 +48,18 @@ void	ft_putstr(char *s)
 	}
 }
 
-void	ft_hexdecimal(unsigned long long nb, bool mode)
+void	ft_hexdecimal(unsigned int nb, bool mode)
 {
-    int tmp;
-    if (nb == 0)
-		return;
-    tmp = nb % 16;
-    ft_hexdecimal(nb / 16, mode);
-    if (mode == true)
+	int tmp ;
+	tmp = nb;
+    if (nb > 15)
+    {
+        ft_hexdecimal((nb / 16), mode);
+        ft_hexdecimal((nb % 16), mode);
+    }
+    else if (mode == true)
         ft_putchar(U_HEX[tmp], 1);
-    else
+    else 
         ft_putchar(L_HEX[tmp], 1);
 }
 
