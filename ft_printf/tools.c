@@ -6,7 +6,7 @@
 /*   By: useraccount <useraccount@student.42.fr>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/03 10:22:16 by zel-khad          #+#    #+#             */
-/*   Updated: 2023/12/04 02:03:08 by useraccount      ###   ########.fr       */
+/*   Updated: 2023/12/04 11:43:54 by useraccount      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,25 +48,19 @@ void	ft_putstr(char *s)
 	}
 }
 
-void	ft_hexdecimal(unsigned int nb, bool mode)
-{
-	unsigned long long   tmp ;
-	tmp = nb;
+void	ft_hexdecimal(unsigned long long nb, bool mode)
+{	
     if (nb > 15)
     {
         ft_hexdecimal((nb / 16), mode);
-        tmp = nb % 16;
-		if (mode == true)
-			ft_putchar(U_HEX[tmp], 1);
-		else 
-			ft_putchar(L_HEX[tmp], 1);
+        ft_hexdecimal((nb % 16), mode);
     }
 	else {
 		
 		if (mode == true)
-			ft_putchar(U_HEX[tmp], 1);
+			ft_putchar(U_HEX[nb], 1);
 		else 
-			ft_putchar(L_HEX[tmp], 1);
+			ft_putchar(L_HEX[nb], 1);
 	}
 }
 
@@ -81,13 +75,8 @@ void	ft_unsigned(unsigned int nb)
 		ft_putchar(nb + '0', 1);
 }
 
-void    ft_address(unsigned long long *address)
+void    ft_address(unsigned long long address)
 {
-    if(!address)
-        ft_putstr("0x0");
-    else
-    {
-        ft_putstr("0x");
-        ft_hexdecimal((unsigned long long)address, true);
-    }
+    ft_putstr("0x");
+    ft_hexdecimal(address, false);
 }

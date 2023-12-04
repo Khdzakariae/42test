@@ -6,7 +6,7 @@
 /*   By: useraccount <useraccount@student.42.fr>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/03 10:22:07 by zel-khad          #+#    #+#             */
-/*   Updated: 2023/12/04 01:59:52 by useraccount      ###   ########.fr       */
+/*   Updated: 2023/12/04 11:44:50 by useraccount      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -64,9 +64,9 @@ puts("__________degit__________");
     printf("ori lent is {%i} ", x);
 puts("\n-------------------------");
 puts("__________pointer__________");
-    i = ft_printf("%p", "lk");
+    i = ft_printf("%p", NULL);
     puts("\n");
-    x = printf("%p", "lk");
+    x = printf("%p", NULL);
     puts("\n");
     printf("the lent is |%i|  ", i);
      puts("");

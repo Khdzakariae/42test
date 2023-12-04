@@ -6,7 +6,7 @@
 /*   By: useraccount <useraccount@student.42.fr>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/03 10:22:24 by zel-khad          #+#    #+#             */
-/*   Updated: 2023/12/04 01:00:52 by useraccount      ###   ########.fr       */
+/*   Updated: 2023/12/04 11:41:31 by useraccount      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,11 @@ void	ft_putnbr(int);
 void	ft_putstr(char *);
 int	    ft_putchar(char, int);
 void	ft_unsigned(unsigned int);
-void	ft_hexdecimal( unsigned int, bool);
-void    ft_address(unsigned long long*);
+// void	ft_hexdecimal( unsigned int, bool);
+void	ft_hexdecimal(unsigned long long nb, bool mode);
+// void    ft_address(unsigned long long*);
+// void    ft_address(unsigned int);
+void    ft_address(unsigned long long address);
+
 
 #endif
