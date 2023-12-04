@@ -6,7 +6,7 @@
 /*   By: useraccount <useraccount@student.42.fr>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/03 10:21:51 by zel-khad          #+#    #+#             */
-/*   Updated: 2023/12/03 20:47:37 by useraccount      ###   ########.fr       */
+/*   Updated: 2023/12/04 01:01:05 by useraccount      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,7 +33,7 @@ static void interpreter_input(va_list *list, int current_char) {
         ft_putstr(va_arg(*list, char *));
     }
     else if (current_char == 'p')
-        ft_address(va_arg(*list , unsigned long long *));
+        ft_address(va_arg(*list , unsigned long long*));
     
     else if (current_char == 'x')
         ft_hexdecimal(va_arg(*list , unsigned int), false);

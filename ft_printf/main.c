@@ -6,7 +6,7 @@
 /*   By: useraccount <useraccount@student.42.fr>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/03 10:22:07 by zel-khad          #+#    #+#             */
-/*   Updated: 2023/12/03 20:49:43 by useraccount      ###   ########.fr       */
+/*   Updated: 2023/12/04 01:59:52 by useraccount      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,18 +28,18 @@ puts("\n");
     printf("ori lent is {%i} ", x);
 puts("\n-------------------------");
 puts("_________lowercase__________");
-    i = ft_printf("%x", -456);
+    i = ft_printf("%x",  "lk");
     puts("\n");
-    x = printf("%x", -456);
+    x = printf("%x",  "lk");
     puts("\n");
     printf("the lent is |%i|  ", i);
      puts("");
     printf("ori lent is {%i} ", x);
 puts("\n_________________________");
 puts("_________uppercase__________");
-    i = ft_printf("%X", -456);
+    i = ft_printf("%X", "lk");
     puts("\n");
-    x = printf("%X", -456);
+    x = printf("%X", "lk");
     puts("\n");
     printf("the lent is |%i|  ", i);
      puts("");
@@ -55,18 +55,18 @@ puts("_________string__________");
     printf("ori lent is {%i} ", x);
 puts("\n-------------------------");
 puts("__________degit__________");
-    i = ft_printf("%d", -456);
+    i = ft_printf("%d", "");
     puts("\n");
-    x = printf("%d", -456);
+    x = printf("%d", "");
     puts("\n");
     printf("the lent is |%i|  ", i);
      puts("");
     printf("ori lent is {%i} ", x);
 puts("\n-------------------------");
 puts("__________pointer__________");
-    i = ft_printf("%p", NULL);
+    i = ft_printf("%p", "lk");
     puts("\n");
-    x = printf("%p", NULL);
+    x = printf("%p", "lk");
     puts("\n");
     printf("the lent is |%i|  ", i);
      puts("");

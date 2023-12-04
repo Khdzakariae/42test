@@ -6,7 +6,7 @@
 /*   By: useraccount <useraccount@student.42.fr>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/03 10:22:16 by zel-khad          #+#    #+#             */
-/*   Updated: 2023/12/03 20:50:28 by useraccount      ###   ########.fr       */
+/*   Updated: 2023/12/04 02:03:08 by useraccount      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,17 +50,24 @@ void	ft_putstr(char *s)
 
 void	ft_hexdecimal(unsigned int nb, bool mode)
 {
-	int tmp ;
+	unsigned long long   tmp ;
 	tmp = nb;
     if (nb > 15)
     {
         ft_hexdecimal((nb / 16), mode);
-        ft_hexdecimal((nb % 16), mode);
+        tmp = nb % 16;
+		if (mode == true)
+			ft_putchar(U_HEX[tmp], 1);
+		else 
+			ft_putchar(L_HEX[tmp], 1);
     }
-    else if (mode == true)
-        ft_putchar(U_HEX[tmp], 1);
-    else 
-        ft_putchar(L_HEX[tmp], 1);
+	else {
+		
+		if (mode == true)
+			ft_putchar(U_HEX[tmp], 1);
+		else 
+			ft_putchar(L_HEX[tmp], 1);
+	}
 }
 
 void	ft_unsigned(unsigned int nb)
@@ -81,6 +88,6 @@ void    ft_address(unsigned long long *address)
     else
     {
         ft_putstr("0x");
-        ft_hexdecimal((unsigned long long)address, false);
+        ft_hexdecimal((unsigned long long)address, true);
     }
 }
